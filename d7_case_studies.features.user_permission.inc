@@ -10,6 +10,15 @@
 function d7_case_studies_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: administer flexslider.
+  $permissions['administer flexslider'] = array(
+    'name' => 'administer flexslider',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'flexslider',
+  );
+
   // Exported permission: create case_study content.
   $permissions['create case_study content'] = array(
     'name' => 'create case_study content',

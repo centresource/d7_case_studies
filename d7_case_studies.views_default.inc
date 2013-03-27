@@ -22,7 +22,7 @@ function d7_case_studies_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Case Studies';
+  $handler->display->display_options['title'] = 'How We Help';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -45,7 +45,7 @@ function d7_case_studies_views_default_views() {
   $handler->display->display_options['fields']['field_listing_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_listing_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_listing_image']['settings'] = array(
-    'image_style' => 'square_thumbnail',
+    'image_style' => '200x200',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_listing_image']['group_column'] = 'fid';
@@ -70,6 +70,8 @@ function d7_case_studies_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h2';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -103,7 +105,7 @@ function d7_case_studies_views_default_views() {
   /* Display: Case Studies Page */
   $handler = $view->new_display('page', 'Case Studies Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['path'] = 'case-studies';
+  $handler->display->display_options['path'] = 'how-we-help';
 
   /* Display: Featured Case Study */
   $handler = $view->new_display('block', 'Featured Case Study', 'block');
@@ -143,7 +145,41 @@ function d7_case_studies_views_default_views() {
 
   /* Display: Photo Grid */
   $handler = $view->new_display('entity_view', 'Photo Grid', 'entity_view_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'photo-grid';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'slideshow';
+  $handler->display->display_options['style_options']['slideshow_type'] = 'flexslider_views_slideshow';
+  $handler->display->display_options['style_options']['slideshow_skin'] = 'default';
+  $handler->display->display_options['style_options']['skin_info'] = array(
+    'class' => 'default',
+    'name' => 'Default',
+    'module' => 'views_slideshow',
+    'path' => '',
+    'stylesheets' => array(),
+  );
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'field_photos' => 0,
+  );
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'field_photos' => 0,
+  );
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Photos */
   $handler->display->display_options['fields']['field_photos']['id'] = 'field_photos';
@@ -156,9 +192,10 @@ function d7_case_studies_views_default_views() {
   $handler->display->display_options['fields']['field_photos']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_photos']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_photos']['settings'] = array(
-    'image_style' => 'square_thumbnail',
+    'image_style' => '',
     'image_link' => '',
   );
+  $handler->display->display_options['fields']['field_photos']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_photos']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_photos']['multi_type'] = 'ul';
   $handler->display->display_options['defaults']['sorts'] = FALSE;

@@ -30,6 +30,40 @@ function d7_case_studies_views_api() {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function d7_case_studies_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: 200x200.
+  $styles['200x200'] = array(
+    'name' => '200x200',
+    'effects' => array(
+      3 => array(
+        'label' => 'Crop and scale manually',
+        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
+        'effect callback' => 'manualcrop_crop_and_scale_effect',
+        'form callback' => 'manualcrop_crop_and_scale_form',
+        'summary theme' => 'manualcrop_crop_and_scale_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => '200',
+          'height' => '200',
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => '200x200',
+        ),
+        'weight' => '0',
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function d7_case_studies_node_info() {

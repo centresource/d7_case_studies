@@ -151,6 +151,9 @@ function d7_case_studies_strongarm() {
     'video' => array(
       'preview' => 1,
     ),
+    'image' => array(
+      'preview' => 0,
+    ),
   );
   $export['file_entity_link_settings'] = $strongarm;
 
