@@ -22,7 +22,7 @@ function d7_case_studies_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'How We Help';
+  $handler->display->display_options['title'] = 'Case Studies';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -45,7 +45,7 @@ function d7_case_studies_views_default_views() {
   $handler->display->display_options['fields']['field_listing_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_listing_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_listing_image']['settings'] = array(
-    'image_style' => '200x200',
+    'image_style' => '',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_listing_image']['group_column'] = 'fid';
@@ -105,7 +105,7 @@ function d7_case_studies_views_default_views() {
   /* Display: Case Studies Page */
   $handler = $view->new_display('page', 'Case Studies Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['path'] = 'how-we-help';
+  $handler->display->display_options['path'] = 'case-studies';
 
   /* Display: Featured Case Study */
   $handler = $view->new_display('block', 'Featured Case Study', 'block');
