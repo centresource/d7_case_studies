@@ -160,6 +160,13 @@ function d7_case_studies_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'manualcrop_cache_control';
+  $strongarm->value = TRUE;
+  $export['manualcrop_cache_control'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_case_study';
   $strongarm->value = array();
   $export['menu_options_case_study'] = $strongarm;

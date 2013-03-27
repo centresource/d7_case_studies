@@ -19,6 +19,13 @@ function d7_case_studies_user_default_permissions() {
     'module' => 'flexslider',
   );
 
+  // Exported permission: administer manualcrop settings.
+  $permissions['administer manualcrop settings'] = array(
+    'name' => 'administer manualcrop settings',
+    'roles' => array(),
+    'module' => 'manualcrop',
+  );
+
   // Exported permission: create case_study content.
   $permissions['create case_study content'] = array(
     'name' => 'create case_study content',
