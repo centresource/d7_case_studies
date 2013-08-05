@@ -23,9 +23,9 @@ function d7_case_studies_field_group_info() {
     'label' => 'Media',
     'weight' => '1',
     'children' => array(
-      0 => 'field_photos',
+      0 => 'field_case_study_video',
       1 => 'field_listing_image',
-      2 => 'field_case_study_video',
+      2 => 'field_photos',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

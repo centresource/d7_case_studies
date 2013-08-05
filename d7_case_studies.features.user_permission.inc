@@ -10,7 +10,7 @@
 function d7_case_studies_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: administer flexslider.
+  // Exported permission: 'administer flexslider'.
   $permissions['administer flexslider'] = array(
     'name' => 'administer flexslider',
     'roles' => array(
@@ -19,14 +19,7 @@ function d7_case_studies_user_default_permissions() {
     'module' => 'flexslider',
   );
 
-  // Exported permission: administer manualcrop settings.
-  $permissions['administer manualcrop settings'] = array(
-    'name' => 'administer manualcrop settings',
-    'roles' => array(),
-    'module' => 'manualcrop',
-  );
-
-  // Exported permission: create case_study content.
+  // Exported permission: 'create case_study content'.
   $permissions['create case_study content'] = array(
     'name' => 'create case_study content',
     'roles' => array(
@@ -36,7 +29,7 @@ function d7_case_studies_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any case_study content.
+  // Exported permission: 'delete any case_study content'.
   $permissions['delete any case_study content'] = array(
     'name' => 'delete any case_study content',
     'roles' => array(
@@ -46,7 +39,7 @@ function d7_case_studies_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own case_study content.
+  // Exported permission: 'delete own case_study content'.
   $permissions['delete own case_study content'] = array(
     'name' => 'delete own case_study content',
     'roles' => array(
@@ -56,7 +49,7 @@ function d7_case_studies_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any case_study content.
+  // Exported permission: 'edit any case_study content'.
   $permissions['edit any case_study content'] = array(
     'name' => 'edit any case_study content',
     'roles' => array(
@@ -66,7 +59,7 @@ function d7_case_studies_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own case_study content.
+  // Exported permission: 'edit own case_study content'.
   $permissions['edit own case_study content'] = array(
     'name' => 'edit own case_study content',
     'roles' => array(

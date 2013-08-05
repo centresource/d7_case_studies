@@ -72,14 +72,14 @@ function d7_case_studies_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h2';
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
+  /* Field: Content: Case Study Description */
+  $handler->display->display_options['fields']['field_case_study_description']['id'] = 'field_case_study_description';
+  $handler->display->display_options['fields']['field_case_study_description']['table'] = 'field_data_field_case_study_description';
+  $handler->display->display_options['fields']['field_case_study_description']['field'] = 'field_case_study_description';
+  $handler->display->display_options['fields']['field_case_study_description']['label'] = '';
+  $handler->display->display_options['fields']['field_case_study_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_case_study_description']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['field_case_study_description']['settings'] = array(
     'trim_length' => '200',
   );
   /* Sort criterion: Content: Post date */

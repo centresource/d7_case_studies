@@ -121,6 +121,9 @@ function d7_case_studies_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -128,13 +131,13 @@ function d7_case_studies_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
       ),
       'display' => array(
         'case_studies_entity_view_1' => array(
           'default' => array(
-            'weight' => '2',
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),
